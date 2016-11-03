@@ -20,6 +20,12 @@ gulp.task('connectBuild', function() {
 gulp.task('jekyll', function(done) {
   notify('Compiling Jekyll');
 
+  return cp.spawn('node', ['./social-images.js'], {stdio: 'inherit'})
+  .on('close', function(){
+    return cp.spawn('jekyll', ['build'], {stdio: 'inherit'})
+    .on('close', done);
+  });
+
   return cp.spawn('jekyll', ['build'], {stdio: 'inherit'})
   .on('close', function(){
     gulp.start('css');
@@ -28,7 +34,11 @@ gulp.task('jekyll', function(done) {
       ' --file-ignore /vendor/'+
       ' --empty-alt-ignore'+
       ' --alt-ignore "//"'], {stdio: 'inherit'})
-    done();
+      .on('close', function(){
+        return cp.spawn('node', ['./social-images.js'], {stdio: 'inherit'})
+        .on('close', done);
+        done();
+      });
   });
 });
 

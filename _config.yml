@@ -22,3 +22,11 @@ yandex_metrika: 40647674 # ocheredklientov.com
 google_analytics: UA-46456269-24 # ocheredklientov.com
 facebook_pixel_id: 1064201373633710
 vk_retarget_url: '//vk.com/rtrg?r=yLmG8tDKnrJpNjbZg0ib36SxPyI3YiYK7nAHipb4l/GiBxbnDXVfDBG3p3ero0E5PytT2tnzCxIkS1tAguicD6Uc3LFTBH2AMO*c7kiFjfnLWTUf6I0iyy4/6Up0h09*yZICzdLUHk01F*nc*A0gfq0ae8nHKS0YbyEfB6A9scs-&pixel_id=1000037662'
+
+defaults:
+  -
+    scope:
+      path: ""      # empty string for all files
+      type: posts   # limit to posts
+    values:
+      is_post: true # automatically set is_post=true for all posts
