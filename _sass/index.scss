@@ -3,9 +3,10 @@
   background-position: top center;
   background-size: cover;
 
-  &__title {
+  h1 {
     font-weight: 700;
     font-size: 42px;
+    color: white;
   }
 
   &__button {
@@ -47,5 +48,15 @@
 .b-join {
   &__button {
     white-space: normal;
+  }
+}
+
+.block-inverse {
+  a {
+    color: #87cefa;
+
+    &:hover {
+      color: darken(#87cefa, 10%);
+    }
   }
 }
