@@ -55,7 +55,7 @@ gulp.task('default', ['connectBuild', 'watch'], function() {
 gulp.task('watch', function() {
   gulp.watch(['./_sass/*.scss'], ['css']);
   gulp.watch([
-    '*.md', '*.html', '_layouts/*.html', '_posts/*',
+    '**/*.md', '*.html', '_layouts/*.html', '_posts/*',
     'images/*', '*.yml', '_includes/*', 'js/*.js'
   ], ['jekyll-rebuild']);
 });

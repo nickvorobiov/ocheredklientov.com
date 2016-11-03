@@ -1,3 +1,9 @@
 - 
   name: strategy
   title: Стратегия
+- 
+  name: demand
+  title: Исследование спроса
+- 
+  name: landing
+  title: Лендинг
