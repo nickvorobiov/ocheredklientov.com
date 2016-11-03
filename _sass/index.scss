@@ -52,7 +52,7 @@
 }
 
 .block-inverse {
-  a {
+  a:not(.btn) {
     color: #87cefa;
 
     &:hover {
