@@ -1,0 +1,51 @@
+.b-head {
+  background-image: url(/images/bg.jpg);
+  background-position: top center;
+  background-size: cover;
+
+  &__title {
+    font-weight: 700;
+    font-size: 42px;
+  }
+
+  &__button {
+    font-weight: 500;
+    padding: 12px 24px;
+    white-space: normal;
+  }
+}
+
+.b-me {
+  background: #efefef url(../images/b_main.jpg) bottom right no-repeat;
+  background-size: 50%;  
+
+  &__sign {
+    color: white;
+    font-weight: 700;
+    position: absolute;
+    right: 70px;
+    bottom: 45px;
+
+    @media (max-width: 768px) {
+      right: 20px;
+      bottom: 20px;
+    }
+  }
+}
+
+.b-odd {
+  background-color: #efefef;
+}
+
+.b-testimonials {
+  background-color: #efefef;
+  img {
+    border: 1px solid #e7e8ec;
+  }
+}
+
+.b-join {
+  &__button {
+    white-space: normal;
+  }
+}

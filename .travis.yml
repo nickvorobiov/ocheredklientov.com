@@ -1,0 +1,21 @@
+language: ruby
+rvm:
+- 2.2.5
+script: scripts/build.sh
+install: gem install jekyll html-proofer jekyll-sitemap
+branches:
+  only:
+  - gh-pages
+env:
+  global:
+  - NOKOGIRI_USE_SYSTEM_LIBRARIES=true
+  - DEPLOY_ADR=deploy@bot.nickvorobiov.com:/var/www/ocheredklientov.com
+deploy:
+  skip_cleanup: true
+  provider: script
+  script: scripts/deploy.sh
+  on:
+    branch: gh-pages
+before_install:
+- openssl aes-256-cbc -K $encrypted_865b2f22ab7c_key -iv $encrypted_865b2f22ab7c_iv
+  -in deploy-key.enc -out ./deploy-key -d
