@@ -5,5 +5,8 @@
   name: demand
   title: Исследование спроса
 - 
+  name: magnet
+  title: Магнит
+- 
   name: landing
   title: Лендинг
